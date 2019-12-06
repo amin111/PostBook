@@ -31,6 +31,8 @@ once the post list is fetched from server it will diveded into two parts
 3.1. All Post : Show all post 
 3.2. Favriote Post : show only favriote one
 
+**It also provide retry functionality if user is not mapped to any post than it will ask for retry with diffrent user it will again redireted to login page**
+
 4. Comment page : on click of post it will refrect to the comment page which have all comment against this post
 
 ![Alt text](/screenshot/1.png?raw=true "Splash Screen") ![Alt text](/screenshot/2.png?raw=true "Login page") ![Alt text](/screenshot/3.png?raw=true "All Post") ![Alt text](/screenshot/4.png?raw=true "Favriote Post") ![Alt text](/screenshot/5.png?raw=true "Comment page")
