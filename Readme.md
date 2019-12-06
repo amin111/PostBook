@@ -31,7 +31,7 @@ once the post list is fetched from server it will diveded into two parts
 3.1. All Post : Show all post 
 3.2. Favriote Post : show only favriote one
 
-**It also provide retry functionality if user is not mapped to any post than it will ask for retry with diffrent user it will again redireted to login page**
+**It also provide retry functionality if user is not mapped to any post than it will ask for retry with diffrent user, on click it will redireted to the login page**
 
 4. Comment page : on click of post it will refrect to the comment page which have all comment against this post
 
