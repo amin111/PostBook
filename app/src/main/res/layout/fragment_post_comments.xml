@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+        <variable
+            name="postCommentViewModel"
+            type="com.demo.postbookdb.viewmodel.PostCommentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/loading_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/loading_comments"
+            android:textAlignment="center"
+            app:visibleGone="@{isLoading}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/grey_light"
+            app:visibleGone="@{!isLoading}">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_horizontal_margin"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/item_horizontal_margin"
+                app:cardCornerRadius="@dimen/cardview_radius"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="horizontal"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/item_horizontal_margin"
+                    android:layout_marginEnd="@dimen/item_horizontal_margin"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/post_title"
+                        android:fontFamily="@font/postbook_bold"
+                        android:textColor="@color/text_header"
+                        android:text="@{postCommentViewModel.userPost.title}"
+                        android:textSize="@dimen/project_text"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_body"
+                        android:contentDescription="@string/post_description"
+                        android:text="@{String.format(@string/description, postCommentViewModel.userPost.body)}"
+                        android:textSize="@dimen/project_text" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/comment_list"
+                app:layoutManager="LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
