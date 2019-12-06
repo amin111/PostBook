@@ -37,4 +37,4 @@ once the post list is fetched from server it will diveded into two parts
 
 # Screenshots :
 
-![Alt text](/screenshot/1.png?raw=true "Splash Screen") ![Alt text](/screenshot/2.png?raw=true "Login page") ![Alt text](/screenshot/3.png?raw=true "All Post") ![Alt text](/screenshot/4.png?raw=true "Favriote Post") ![Alt text](/screenshot/5.png?raw=true "Comment page")
+![Alt text](/screenshot/1.png?raw=true "Splash Screen")  **-->**  ![Alt text](/screenshot/2.png?raw=true "Login page")  **-->**  ![Alt text](/screenshot/3.png?raw=true "All Post")  **-->**  ![Alt text](/screenshot/4.png?raw=true "Favriote Post")  **-->**  ![Alt text](/screenshot/5.png?raw=true "Comment page")
