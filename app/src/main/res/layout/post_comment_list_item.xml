@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="postcomment"
+            type="com.demo.postbookdb.service.model.PostComment" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
+        app:cardCornerRadius="@dimen/comment_cardview_radius"
+        android:orientation="horizontal"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:layout_marginEnd="@dimen/item_horizontal_margin"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/post_comment_title"
+                android:fontFamily="@font/postbook_bold"
+                android:text="@{postcomment.name}"
+                android:textColor="@color/text_header"
+                android:textSize="@dimen/project_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/email"
+                android:textColor="@color/text_body"
+                android:text="@{String.format(@string/email, postcomment.email)}"
+                android:textSize="@dimen/project_text" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_body"
+                android:contentDescription="@string/comment_description"
+                android:text="@{String.format(@string/description, postcomment.body)}"
+                android:textSize="@dimen/project_text" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
