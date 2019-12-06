@@ -57,7 +57,7 @@ public class PostCommentAdapter extends RecyclerView.Adapter<PostCommentAdapter.
     @Override
     public PostCommentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         PostCommentListItemBinding binding = DataBindingUtil
-                .inflate(LayoutInflater.from(parent.getContext()), R.layout.post_comment_list_item,parent, false);
+                .inflate(LayoutInflater.from(parent.getContext()), R.layout.post_comment_list_item, parent, false);
         return new PostCommentViewHolder(binding);
     }
 
