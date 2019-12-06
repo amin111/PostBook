@@ -1,8 +1,5 @@
 # PostBook
-Understanding Of MVVM &amp; Retrofit to develop maintainable and testable structure 
-
-
-
+Android App for user to see posts and comments
 
 
 # Basic Understanding Of MVVM : 
@@ -18,8 +15,7 @@ basically ViewModel have no idea who is observing
 
 
 
-
-# Basic Understanding of PostBook : 
+# Basic Understanding of App Screens : 
 it contain 4 screens
 
 1. Splash Screen 
