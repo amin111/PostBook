@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -15,7 +16,7 @@ import java.util.List;
 
 /*MVVM ViewModel : fetch data from server side and generate observable to observe by View*/
 public class PostListViewModel extends AndroidViewModel {
-    private final LiveData<List<UserPost>> projectListObservable;
+    private final MutableLiveData<List<UserPost>> projectListObservable;
 
     public PostListViewModel(Application application, int userId) {
         super(application);

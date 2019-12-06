@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -17,7 +18,7 @@ import java.util.List;
 
 /*MVVM ViewModel : fetch data from server side and generate observable to observe by View*/
 public class PostCommentViewModel extends AndroidViewModel {
-    private final LiveData<List<PostComment>> postCommentObservable;
+    private final MutableLiveData<List<PostComment>> postCommentObservable;
     public ObservableField<List<PostComment>> postComment = new ObservableField<>();
     public ObservableField<UserPost> userPost = new ObservableField<>();
 

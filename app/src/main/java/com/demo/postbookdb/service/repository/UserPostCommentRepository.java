@@ -33,7 +33,7 @@ public class UserPostCommentRepository {
     }
 
     /*get user post list from server*/
-    public LiveData<List<UserPost>> getUserPostList(int userId) {
+    public MutableLiveData<List<UserPost>> getUserPostList(int userId) {
         final MutableLiveData<List<UserPost>> data = new MutableLiveData<>();
 
         projectService.doGetUserPostListResources(userId).enqueue(new Callback<List<UserPost>>() {
@@ -53,7 +53,7 @@ public class UserPostCommentRepository {
     }
 
     /*get user comment list from server*/
-    public LiveData<List<PostComment>> getPostComments(int postID) {
+    public MutableLiveData<List<PostComment>> getPostComments(int postID) {
         final MutableLiveData<List<PostComment>> data = new MutableLiveData<>();
 
         projectService.doGetUserPostCommentResources(postID).enqueue(new Callback<List<PostComment>>() {
