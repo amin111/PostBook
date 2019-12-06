@@ -15,7 +15,7 @@ basically ViewModel have no idea who is observing
 
 
 
-# Basic Understanding of App Screens : 
+# App Screens : 
 it contain 4 screens
 
 1. Splash Screen 
