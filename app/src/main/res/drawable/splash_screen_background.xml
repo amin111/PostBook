@@ -6,7 +6,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/dd_logo"
+            android:src="@drawable/postbook_logo"
             android:tileMode="disabled" />
     </item>
 </layer-list>
