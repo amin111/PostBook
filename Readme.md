@@ -42,3 +42,6 @@ once the post list is fetched from server it will diveded into two parts
 ===============================================================================
 
 **4**  ![Alt text](/screenshot/4.png?raw=true "Favriote Post")  **5**  ![Alt text](/screenshot/5.png?raw=true "Comment page")
+
+===============================================================================
+
