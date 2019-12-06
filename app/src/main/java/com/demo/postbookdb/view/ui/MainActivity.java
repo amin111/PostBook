@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left)
-                .add(R.id.fragment_container, LoginFragment.userLogin(), "LoginFragment")
+                .replace(R.id.fragment_container, LoginFragment.userLogin(), "LoginFragment")
                 .commit();
     }
 
