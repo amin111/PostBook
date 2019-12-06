@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PostBook</string>
+    <string name="app_logo">PostBook Logo</string>
+    <string name="user_id">User Id</string>
+    <string name="Login">Login</string>
+    <string name="user_not_found">User Id not found!!</string>
+    <string name="description">Description: %s</string>
+    <string name="email">Email: %s</string>
+    <string name="post_description">Post Description</string>
+    <string name="comment_description">Comment Description</string>
+    <string name="posts">Posts</string>
+    <string name="post_title">Post Title</string>
+    <string name="post_comment_title">Post Comment Title</string>
+    <string name="comments">Post Comments</string>
+    <string name="comment_list">Comment List</string>
+    <string name="post_list">Post List</string>
+    <string name="retry">Retry</string>
+    <string name="fav">Favorite</string>
+    <string name="all">All</string>
+    <string name="user_not_maped">This User Is not Mapped To any Post, try with Different User</string>
+    <string name="marked_fav">Post marked as Favorite</string>
+    <string name="removed_fav">Post removed from Favorite</string>
+    <string name="required">Required!!</string>
+    <string name="loading_post">Loading Posts …</string>
+    <string name="loading_comments">Loading Post Comments …</string>
+</resources>
