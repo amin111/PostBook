@@ -24,8 +24,8 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.UserPo
 
     @Nullable
     private final PostClickCallback postClickCallback;
-    List<UserPost> postList;
-    List<UserPost> postListFiltered;
+    List<? extends UserPost> postList;
+    List<? extends UserPost> postListFiltered;
     private boolean isFavActive = false;
     private ViewGroup parent;
 
@@ -33,7 +33,7 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.UserPo
         this.postClickCallback = postClickCallback;
     }
 
-    public void setUserPostList(final List<UserPost> userPostList) {
+    public void setUserPostList(final List<? extends UserPost> userPostList) {
         if (this.postList == null) {
             this.postList = userPostList;
             notifyItemRangeInserted(0, postList.size());
@@ -69,8 +69,7 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.UserPo
 
     @Override
     public UserPostViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        PostListItemBinding binding = DataBindingUtil
-                .inflate(LayoutInflater.from(parent.getContext()), R.layout.post_list_item, parent, false);
+        PostListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.post_list_item,parent,false);
 
         binding.setCallback(postClickCallback);
         this.parent = parent;
