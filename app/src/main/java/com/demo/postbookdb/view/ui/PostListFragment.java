@@ -14,7 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.demo.postbookdb.R;
-import com.demo.postbookdb.databinding.FragmentProjectListBinding;
+import com.demo.postbookdb.databinding.FragmentPostListBinding;
 import com.demo.postbookdb.service.model.UserPost;
 import com.demo.postbookdb.view.adapter.UserPostAdapter;
 import com.demo.postbookdb.view.callback.PostClickCallback;
@@ -29,7 +29,7 @@ public class PostListFragment extends Fragment implements PostClickCallback {
     public static final String TAG = "PostListFragment";
     private static final String KEY_USER_ID = "userId";
     private UserPostAdapter userPostAdapter;
-    private FragmentProjectListBinding binding;
+    private FragmentPostListBinding binding;
 
     public static PostListFragment forUserPostList(int userId) {
         PostListFragment fragment = new PostListFragment();
@@ -81,7 +81,7 @@ public class PostListFragment extends Fragment implements PostClickCallback {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ((MainActivity) getActivity()).setActionBarTitle(getString(R.string.posts));
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_list, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_post_list, container, false);
         userPostAdapter = new UserPostAdapter(this);
         binding.postList.setAdapter(userPostAdapter);
         binding.setCallback(this);
