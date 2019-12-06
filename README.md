@@ -2,6 +2,9 @@
 Understanding Of MVVM &amp; Retrofit to develop maintainable and testable structure 
 
 
+
+
+
 # Basic Understanding Of MVVM : 
 it devided into 3 parts 
 
@@ -12,6 +15,9 @@ it devided into 3 parts
 3. ViewModel : it will get the data from Model and generate Observable which is observe by view part  
 
 basically ViewModel have no idea who is observing 
+
+
+
 
 # Basic Understanding of PostBook : 
 it contain 3 screen
