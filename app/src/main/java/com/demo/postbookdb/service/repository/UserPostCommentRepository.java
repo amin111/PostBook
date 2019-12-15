@@ -1,6 +1,5 @@
 package com.demo.postbookdb.service.repository;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.demo.postbookdb.service.model.PostComment;
@@ -46,6 +45,7 @@ public class UserPostCommentRepository {
             @Override
             public void onFailure(Call<List<UserPost>> call, Throwable t) {
                 data.setValue(null);
+                call.cancel();
             }
         });
 
@@ -66,6 +66,7 @@ public class UserPostCommentRepository {
             @Override
             public void onFailure(Call<List<PostComment>> call, Throwable t) {
                 data.setValue(null);
+                call.cancel();
             }
         });
 
