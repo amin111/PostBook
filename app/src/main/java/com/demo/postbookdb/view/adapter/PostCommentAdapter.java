@@ -34,7 +34,7 @@ public class PostCommentAdapter extends RecyclerView.Adapter<PostCommentAdapter.
 
                 @Override
                 public int getNewListSize() {
-                    return postCommentList.size();
+                    return postCommnetList.size();
                 }
 
                 @Override
@@ -44,12 +44,12 @@ public class PostCommentAdapter extends RecyclerView.Adapter<PostCommentAdapter.
 
                 @Override
                 public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-                    PostComment postComment = postCommentList.get(newItemPosition);
-                    PostComment old = postCommentList.get(oldItemPosition);
+                    PostComment postComment = postCommnetList.get(newItemPosition);
+                    PostComment old = postCommnetList.get(oldItemPosition);
                     return postComment.id == old.id && Objects.equals(postComment.postId, old.postId);
                 }
             });
-            this.postCommentList = postCommentList;
+            this.postCommentList = postCommnetList;
             result.dispatchUpdatesTo(this);
         }
     }

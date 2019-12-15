@@ -46,22 +46,22 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.UserPo
 
                 @Override
                 public int getNewListSize() {
-                    return postList.size();
+                    return userPostList.size();
                 }
 
                 @Override
                 public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-                    return UserPostAdapter.this.postList.get(oldItemPosition).id == postList.get(newItemPosition).id;
+                    return UserPostAdapter.this.postList.get(oldItemPosition).id == userPostList.get(newItemPosition).id;
                 }
 
                 @Override
                 public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-                    UserPost userPost = postList.get(newItemPosition);
-                    UserPost old = postList.get(oldItemPosition);
+                    UserPost userPost = userPostList.get(newItemPosition);
+                    UserPost old = userPostList.get(oldItemPosition);
                     return userPost.id == old.id && Objects.equals(userPost.title, old.title);
                 }
             });
-            this.postList = postList;
+            this.postList = userPostList;
             result.dispatchUpdatesTo(this);
         }
         this.postListFiltered = postList;
