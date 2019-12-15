@@ -20,6 +20,7 @@
     <string name="user_not_maped">This User Is not Mapped To any Post, try with Different User</string>
     <string name="marked_fav">Post marked as Favorite</string>
     <string name="removed_fav">Post removed from Favorite</string>
+    <string name="error">Something went wrong!!</string>
     <string name="required">Required!!</string>
     <string name="loading_post">Loading Posts …</string>
     <string name="loading_comments">Loading Post Comments …</string>
