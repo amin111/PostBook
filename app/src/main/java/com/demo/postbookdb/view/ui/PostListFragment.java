@@ -107,17 +107,18 @@ public class PostListFragment extends Fragment implements PostClickCallback {
             @Override
             public void onChanged(@Nullable List<UserPost> posts) {
                 binding.setIsLoading(false);
-                if (posts != null && posts.size() > 0) {
-                    userPostAdapter.setUserPostList(posts);
-                } else {
-                    Snackbar.make(binding.getRoot(), getString(R.string.user_not_maped), Snackbar.LENGTH_INDEFINITE)
-                            .setAction(R.string.retry, new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    ((MainActivity) getActivity()).backToLogin();
-                                }
-                            }).show();
-                }
+                if (posts != null)
+                    if (posts.size() > 0) {
+                        userPostAdapter.setUserPostList(posts);
+                    } else {
+                        Snackbar.make(binding.getRoot(), getString(R.string.user_not_maped), Snackbar.LENGTH_INDEFINITE)
+                                .setAction(R.string.retry, new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        ((MainActivity) getActivity()).backToLogin();
+                                    }
+                                }).show();
+                    }
             }
         });
     }
