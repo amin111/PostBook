@@ -107,7 +107,7 @@ public class PostListFragment extends Fragment implements PostClickCallback {
             @Override
             public void onChanged(@Nullable List<UserPost> posts) {
                 binding.setIsLoading(false);
-                if (posts != null)
+                if (posts != null) {
                     if (posts.size() > 0) {
                         userPostAdapter.setUserPostList(posts);
                     } else {
@@ -119,6 +119,9 @@ public class PostListFragment extends Fragment implements PostClickCallback {
                                     }
                                 }).show();
                     }
+                } else {
+                    Snackbar.make(binding.getRoot(), getString(R.string.error), Snackbar.LENGTH_LONG).show();
+                }
             }
         });
     }
